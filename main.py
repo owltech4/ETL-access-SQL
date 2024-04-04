@@ -1,33 +1,12 @@
-# main.py teste
+from database_operations import fetch_all_rows
 
-import mysql.connector
-from config import db_config
+def main():
+    table_name = 'your_table_name'  # replace with your table name
+    rows = fetch_all_rows(table_name)
+    
+    if rows is not None:
+        for row in rows:
+            print(row)
 
-try:
-    # Establishing the connection
-    conn = mysql.connector.connect(**db_config)
-    
-    # Creating a cursor object using the connection
-    cursor = conn.cursor()
-    
-    # Query to execute
-    query = "SELECT * FROM your_table_name"
-    
-    # Executing the query
-    cursor.execute(query)
-    
-    # Fetching all rows from the table
-    rows = cursor.fetchall()
-    
-    # Iterating through rows and printing
-    for row in rows:
-        print(row)
-        
-except mysql.connector.Error as err:
-    print(f"Error: {err}")
-finally:
-    # Closing the cursor and connection
-    if cursor:
-        cursor.close()
-    if conn:
-        conn.close()
+if __name__ == "__main__":
+    main()
