@@ -1,4 +1,4 @@
-# main.py 
+# main.py teste
 
 import mysql.connector
 from config import db_config
