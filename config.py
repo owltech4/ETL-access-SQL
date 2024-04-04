@@ -1,10 +1,10 @@
 # Database configuration details
 db_config = {
     'host': 'localhost',
-    'database': 'your_database_name',
+    'database': 'nubank',
     'port':'3306',
     'user': 'root',
-    'password': 'your_password'
+    'password': 'NewSky123@'
     
 }
 
