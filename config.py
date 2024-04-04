@@ -1,4 +1,4 @@
-# config.py
+# config.py    
 
 # Database configuration details
 db_config = {
